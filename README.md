@@ -10,6 +10,12 @@ app-specific use and tracking the development of the Makefile.
 Fezā, named as 'feather' in Japanese,  is also servings as the gradular module
 for Project Icarus.
 
+| Branch          | Test Condition |
+|:--------------- |:---------------|
+| `master`        | [![pipeline status](https://gitlab.com/ZORALab/feza/badges/master/pipeline.svg)](https://gitlab.com/ZORALab/feza/commits/master) |
+| `feza/staging`  | [![pipeline status](https://gitlab.com/ZORALab/feza/badges/feza/staging/pipeline.svg)](https://gitlab.com/ZORALab/feza/commits/feza/staging) |
+| `feza/next` | [![pipeline status](https://gitlab.com/ZORALab/feza/badges/feza/next/pipeline.svg)](https://gitlab.com/ZORALab/feza/commits/feza/next) |
+
 <br/>
 ## Usage
 1. Fork this project.
