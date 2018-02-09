@@ -1,0 +1,45 @@
+image: golang:1.9
+
+variables:
+  REPO_NAME: gitlab.com/zoralab/feza
+
+before_script:
+  - export TERM=xterm
+  - go version
+  - echo $CI_BUILD_REF
+  - echo $CI_PROJECT_DIR
+  - apt update -y && apt upgrade -y
+  - apt install sudo -y
+  - cd $CI_PROJECT_DIR
+  - ./scripts/setup.bash
+
+stages:
+  - test
+  - build
+
+test-project:
+  stage: test
+  script:
+    - make test
+  only:
+    - branches
+    - tags
+    - schedules
+    - triggers
+    - webs
+    - api
+
+build-project:
+  stage: build
+  script:
+    - make all
+    - make test
+  only:
+    - shion/staging
+    - tags
+    - schedules
+    - triggers
+    - web
+    - api
+  except:
+    - master
