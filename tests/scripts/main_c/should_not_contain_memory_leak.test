@@ -1,0 +1,35 @@
+#!/bin/bash
+TITLE="should not contain memory leak"
+SUITE="main_c"
+DESCRIPTION="\n \
+Using valgrind, we should detect the compiled binary should not have any
+memory leak on runtime.
+"
+tprint_test_description "$TITLE" "$SUITE" "$DESCRIPTION"
+################################################################################
+DEMO="pass"
+BINARY_DIRECTORY="$CURRENT_DIRECTORY/bin"
+BIN_FILE="$BINARY_DIRECTORY/main.bin"
+ERROR_CODE=5
+
+make clean
+make all
+
+if [[ ! -f "$BIN_FILE" ]]; then
+	verdict --failed "binary not compiled."
+	make clean
+	exit $TEST_FAIL
+fi
+
+valgrind -v --error-exitcode=$ERROR_CODE $BIN_FILE
+ret_code=$?
+
+if [[ "$ret_code" == "$ERROR_CODE" ]]; then
+	verdict --failed "valgrind detected one or more  memory check errors."
+	make clean
+	exit $TEST_FAIL
+fi
+
+make clean
+verdict --passed
+exit $TEST_PASS
