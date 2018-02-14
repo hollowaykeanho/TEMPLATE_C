@@ -15,6 +15,7 @@ CC		= gcc
 OBJCOPY		= objcopy
 endif
 STATIC_TEST	= flawfinder
+BASHELL_TEST	= ./bashell.sh
 
 PROJECT_PATH	= .
 INCLUDE_PATH	= includes
@@ -59,6 +60,7 @@ all: $(MAIN_OBJECTS)
 .PHONY: test
 test: $(MAIN_FILES)
 	$(STATIC_TEST) $(PROJECT_PATH)
+	$(BASHELL_TEST) --run
 
 .PHONY: clean
 clean: GARBAGE  = *.o
