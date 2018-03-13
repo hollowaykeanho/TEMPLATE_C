@@ -48,7 +48,8 @@ Clean up the workspace from all the compiled files, such as `.d`, `.o`, `.hex`,
 
 ### 3. `make test`
 Run static analysis upon all the selected `.c` files using the flawfinder,
-the open-source static analyzer for C.
+the open-source static analyzer for C written in the `test` folder using
+[BaSHELL](https://gitlab.com/ZORALab/BaSHELL).
 
 <br/>
 ## License
