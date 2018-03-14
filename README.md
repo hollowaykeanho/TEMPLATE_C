@@ -52,5 +52,9 @@ the open-source static analyzer for C written in the `test` folder using
 [BaSHELL](https://gitlab.com/ZORALab/BaSHELL).
 
 <br/>
+## Others
+1. Android Studio NDK Integration - https://gitlab.com/ZORALab/feza/blob/master/documentations/jni/README.md
+
+<br/>
 ## License
 Apache 2.0
