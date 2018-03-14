@@ -1,3 +1,11 @@
+# Version 1.3
+## Wednesday 17:18:12 - March/14/2018 (+0800)
+-------------------------------------------------------------------------------
+8378cac JNI: updated documentations for JNI integrations
+3647f8f .gitignore: added Android Studio default gitignore values
+cbb32f9 jni: added Android Studio integration for quick NDK development
+3cc2fec README.md: adding more description for make test to mention BaSHELL
+
 # Version 1.2
 ## Wednesday 23:36:13 - February/14/2018 (+0800)
 -------------------------------------------------------------------------------
