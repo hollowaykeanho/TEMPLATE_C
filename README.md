@@ -1,5 +1,14 @@
-[![language](https://img.shields.io/badge/core--language-c-blue.svg?style=for-the-badge)
-]()
+> [!IMPORTANT]
+>
+> This template repository has been completely superseded by
+> [AutomataCI](https://github.com/ChewKeanHo/AutomataCI) with a lot of missing
+> features supported like unit-testing in C and Makefile entire replacement.
+>
+> It shall be archived for education reference purposes. **Please use
+> [AutomataCI](https://github.com/ChewKeanHo/AutomataCI) instead**!
+>
+> Thank you.
+
 
 # CWR (C Workspace Reference)
 CWR is a C workspace reference designed for Linux-based operating system
